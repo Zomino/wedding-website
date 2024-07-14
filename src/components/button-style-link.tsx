@@ -1,0 +1,19 @@
+import type { GatsbyLinkProps } from "gatsby";
+import { Link } from "gatsby"
+import * as React from "react"
+
+// Gatsby Link ref prop is problematic: https://www.charpeni.com/blog/wrapping-gatsbys-link-with-typescript
+const ButtonStyleLink = <TState,>(props: React.PropsWithoutRef<GatsbyLinkProps<TState>>) => {
+    const { children, className, ...restProps } = props;
+
+    return (
+        <Link
+            className={`active:bg-elephant bg-elephant-darker hover:bg-elephant-dark p-1 text-elephant-lighter w-fit ${className}`}
+            {...restProps}
+        >
+            <div className="border border-elephant-lighter py-2 px-5">{children}</div>
+        </Link>
+    )
+}
+
+export default ButtonStyleLink

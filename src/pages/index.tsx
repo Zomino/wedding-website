@@ -2,48 +2,35 @@ import type { HeadFC, PageProps } from "gatsby"
 import { Link } from "gatsby"
 import * as React from "react"
 
+import ButtonStyleLink from "../components/button-style-link"
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <header className="relative">
-          <Link
-              to="/rsvp"
-              className="
-                  absolute
-                  active:bg-elephant
-                  bg-elephant-darker
-                  hover:bg-elephant-dark
-                  p-1
-                  right-5
-                  text-elephant-lighter
-                  top-5
-                  w-fit
-              "
-          >
-              <div className="border border-elephant-lighter py-2 px-5">RSVP</div>
-          </Link>
-          <h1 className="
-              absolute
-              bg-elephant-lighter
-              font-raleway
-              py-7
-              px-10
-              text-3xl
-              top-2/3
-              tracking-wider
-              w-screen
+        <ButtonStyleLink className="absolute right-5 top-5" to="/rsvp">RSVP</ButtonStyleLink>
+        <h1 className="
+            absolute
+            bg-elephant-lighter
+            font-raleway
+            py-7
+            px-10
+            text-3xl
+            top-2/3
+            tracking-wider
+            w-screen
 
-              md:left-1/2
-              md:-translate-x-1/2
-              md:w-auto
-              md:text-4xl
-          ">
-              Angela & Zou
-          </h1>
-          <picture>
-              <source srcSet="http://via.placeholder.com/1920x1080" media="(min-width: 768px)" />
-              <img src="http://via.placeholder.com/640x960" alt="Placeholder" className="w-screen" />
-          </picture>
+            md:left-1/2
+            md:-translate-x-1/2
+            md:w-auto
+            md:text-4xl
+        ">
+            Angela & Zou
+        </h1>
+        <picture>
+            <source srcSet="http://via.placeholder.com/1920x1080" media="(min-width: 768px)" />
+            <img src="http://via.placeholder.com/640x960" alt="Placeholder" className="w-screen" />
+        </picture>
       </header>
       <main className="flex flex-col mt-5 p-5 max-w-xs md:max-w-lg mx-auto text-center">
         <section className="font-lato text-lg">
