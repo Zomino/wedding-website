@@ -9,24 +9,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <>
       <header className="relative">
         <ButtonStyleLink className="absolute right-5 top-5" to="/rsvp">RSVP</ButtonStyleLink>
-        <h1 className="
-            absolute
-            bg-elephant-lighter
-            font-raleway
-            py-7
-            px-10
-            text-3xl
-            top-2/3
-            tracking-wider
-            w-screen
-
-            md:left-1/2
-            md:-translate-x-1/2
-            md:w-auto
-            md:text-4xl
-        ">
-            Angela & Zou
-        </h1>
+        <h1 className="absolute bg-elephant-lighter font-raleway py-7 px-10 text-3xl top-2/3 tracking-wider w-screen md:left-1/2 md:-translate-x-1/2 md:w-auto md:text-4xl">Angela & Zou</h1>
         <picture>
             <source srcSet="http://via.placeholder.com/1920x1080" media="(min-width: 768px)" />
             <img src="http://via.placeholder.com/640x960" alt="Placeholder" className="w-screen" />
