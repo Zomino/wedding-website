@@ -3,7 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <div className="bg-elephant-lighter font-light text-center text-elephant-darker">
+    <>
       <header className="relative">
           <button className="
               absolute
@@ -91,7 +91,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <footer className="mt-20">
         <p className="font-lato">&copy; 2024 Zou Minowa. All rights reserved.</p>
       </footer>
-    </div>
+    </>
   )
 }
 
@@ -99,8 +99,10 @@ export default IndexPage
 
 export const Head: HeadFC = () => (
   <>
-    <title>Angela & Zou</title>
+    {/* Gatsby injects these attributes into the body tag */}
+    <body className="bg-elephant-lighter font-light text-center text-elephant-darker" />
     <meta name="author" content="Zou Minowa" />
     <meta name="description" content="Angela Chan and Zou Minowa's wedding website" />
+    <title>Angela & Zou</title>
   </>
 )
