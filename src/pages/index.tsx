@@ -1,21 +1,13 @@
-import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react"
+
+import StyledButton from "../components/styled-button"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <header className="relative">
-          <button className="
-              absolute
-              bg-elephant-darker
-              right-5
-              text-elephant-lighter
-              top-5
-              w-fit
-              p-1
-          ">
-              <div className="border border-elephant-lighter py-2 px-5">RSVP</div>
-          </button>
+          <StyledButton className="absolute right-5 top-5">RSVP</StyledButton>
           <h1 className="
               absolute
               bg-elephant-lighter
