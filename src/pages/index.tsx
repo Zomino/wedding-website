@@ -97,4 +97,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+  <>
+    <title>Angela & Zou</title>
+    <meta name="author" content="Zou Minowa" />
+    <meta name="description" content="Angela Chan and Zou Minowa's wedding website" />
+  </>
+)
