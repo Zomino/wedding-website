@@ -1,8 +1,8 @@
 import type { HeadFC, PageProps } from "gatsby"
-import { Link } from "gatsby"
 import * as React from "react"
 
 import ButtonStyleLink from "../components/button-style-link"
+import Seo from "../components/seo"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -73,12 +73,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => (
-  <>
-    {/* Gatsby injects these attributes into the body tag */}
-    <body className="bg-elephant-lighter font-light text-center text-elephant-darker" />
-    <meta name="author" content="Zou Minowa" />
-    <meta name="description" content="Angela Chan and Zou Minowa's wedding website" />
-    <title>Angela & Zou</title>
-  </>
-)
+export const Head: HeadFC = () => (<Seo />)
