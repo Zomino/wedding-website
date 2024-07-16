@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    `gatsby-transformer-json`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -30,12 +29,6 @@ const config: GatsbyConfig = {
         "path": "./src/images/"
       },
       __key: "images"
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/data/`,
-      },
     },
   ]
 };

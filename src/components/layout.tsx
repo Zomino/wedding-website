@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import Copyright from "./copyright"
-
 interface LayoutProps {
     pageTitle: string
 }
@@ -17,7 +15,7 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({ children, page
             </header>
             <main className="flex flex-col flex-grow font-lato max-w-xs mt-5 mx-auto p-5 md:max-w-lg">{children}</main>
             <footer className="font-lato mt-20">
-                <Copyright />
+                <p className="font-lato">&copy; 2024 Zou Minowa. All rights reserved.</p>
             </footer>
         </div>
     )

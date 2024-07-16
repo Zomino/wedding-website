@@ -1,27 +1,10 @@
-import type { HeadFC, PageProps } from "gatsby"
-import { graphql } from "gatsby"
+import type { HeadFC } from "gatsby"
 import React from "react"
 
 import ButtonStyledLink from "../components/button-styled-link"
-import Copyright from "../components/copyright"
 import Seo from "../components/seo"
 
-interface IndexPageProps extends PageProps {
-  data: {
-    allScheduleAndAddressesJson: {
-      nodes: Array<{
-          address: string[]
-          id: string
-          time: string
-          title: string
-      }>
-    }
-  }
-}
-
-const IndexPage: React.FC<IndexPageProps> = (props) => {
-  const { data } = props;
-
+const IndexPage = () => {
   return (
     <>
       <header className="font-raleway relative tracking-wider">
@@ -42,25 +25,47 @@ const IndexPage: React.FC<IndexPageProps> = (props) => {
         </section>
         <section className="mt-5">
           <h2 className="sr-only">Schedule & Addresses</h2>
-          {data.allScheduleAndAddressesJson.nodes.map((node) => (
-            <section key={node.id} className="mt-10">
-              <h3 className="font-raleway text-3xl tracking-wider">{node.title}</h3>
-              <dl className="mt-5 text-lg">
-                <dt className="sr-only">Time</dt>
-                <dd>
-                  <time>{node.time}</time>
-                </dd>
-                <dt className="sr-only">Address</dt>
-                <dd className="mt-3">
-                  <address>{node.address.map((line) => (<>{line}<br /></>))}</address>
-                </dd>
-              </dl>
-            </section>
-          ))}
+          <section className="mt-10">
+            <h3 className="font-raleway text-3xl tracking-wider">Ceremony</h3>
+            <dl className="mt-5 text-lg">
+              <dt className="sr-only">Time</dt>
+              <dd>
+                <time>15:00</time>
+              </dd>
+              <dt className="sr-only">Address</dt>
+              <dd className="mt-3">
+                <address>
+                  SS. Cosmas & Damian Catholic Church<br />
+                  Tsuen Wan Catholic Primary School<br />
+                  37-41 Tak Wah St<br />
+                  Tsuen Wan<br />
+                  Hong Kong
+                </address>
+              </dd>
+            </dl>
+          </section>
+          <section className="mt-10">
+            <h3 className="font-raleway text-3xl tracking-wider">Reception</h3>
+            <dl className="mt-5 text-lg">
+              <dt className="sr-only">Time</dt>
+              <dd>
+                <time>18:00</time>
+              </dd>
+              <dt className="sr-only">Address</dt>
+              <dd className="mt-3">
+                <address>
+                  Kowloon Shangri-La Hotel<br />
+                  64 Mody Rd<br />
+                  Tsim Sha Tsui<br />
+                  Hong Kong
+                </address>
+              </dd>
+            </dl>
+          </section>
         </section>
       </main>
       <footer className="mt-20">
-        <Copyright />
+        <p className="font-lato">&copy; 2024 Zou Minowa. All rights reserved.</p>
       </footer>
     </>
   )
@@ -69,16 +74,3 @@ const IndexPage: React.FC<IndexPageProps> = (props) => {
 export default IndexPage
 
 export const Head: HeadFC = () => (<Seo title="Home" />)
-
-export const query = graphql`
-  query {
-    allScheduleAndAddressesJson {
-      nodes {
-        address
-        id
-        title
-        time
-      }
-    }
-  }
-`
