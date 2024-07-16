@@ -2,7 +2,6 @@ import type { HeadFC } from "gatsby"
 import React from "react"
 
 import ButtonStyledLink from "../components/button-styled-link"
-import Copyright from "../components/copyright"
 import Seo from "../components/seo"
 
 const IndexPage = () => {
@@ -66,7 +65,7 @@ const IndexPage = () => {
         </section>
       </main>
       <footer className="mt-20">
-        <Copyright />
+        <p className="font-lato">&copy; 2024 Zou Minowa. All rights reserved.</p>
       </footer>
     </>
   )
