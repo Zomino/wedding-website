@@ -7,11 +7,11 @@ module.exports = {
   theme: {
     colors: {
       elephant: {
-        lighter: '#f5eded',
-        light: '#d4cfcf',
-        DEFAULT: '#a19f9f',
-        dark: '#807e7e',
-        darker: '#676464',
+        lighter: "#f5eded",
+        light: "#d4cfcf",
+        DEFAULT: "#a19f9f",
+        dark: "#807e7e",
+        darker: "#676464",
       },
     },
     fontFamily: {
@@ -21,4 +21,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
