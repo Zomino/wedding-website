@@ -1,12 +1,12 @@
 import React from "react"
-import { HeadFC, PageProps } from "gatsby"
+import { HeadFC } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import ButtonStyledLink from "../components/button-styled-link"
 
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage = () => {
   return (
     <Layout pageTitle="Page not found">
       <ButtonStyledLink className="mx-auto" to="/">Go back</ButtonStyledLink>
