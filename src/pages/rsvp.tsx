@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { HeadFC } from "gatsby";
 
@@ -7,12 +8,27 @@ import Seo from "../components/seo";
 import ButtonStyledLink from "../components/button-styled-link";
 
 const RsvpPage = () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    try {
+      await axios.post(form.action, new FormData(form));
+      form.reset();
+      alert("Thank you for your RSVP!");
+    } catch (error) {
+      alert("An error occurred while submitting the form.");
+    }
+  }
+
   return (
     <Layout pageTitle="RSVP">
       <form
         action="https://getform.io/f/bvreymjb"
         className="md:w-72 text-left"
         method="POST"
+        onSubmit={handleSubmit}
       >
         <div>
           <label className="block" htmlFor="name">
