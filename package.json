@@ -19,7 +19,6 @@
     "@fontsource-variable/raleway": "^5.0.20",
     "@fontsource/lato": "^5.0.21",
     "autoprefixer": "^10.4.19",
-    "axios": "^1.7.2",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
