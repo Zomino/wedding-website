@@ -1,7 +1,8 @@
 import { Button } from '@headlessui/react';
 import React from 'react';
 
-interface StyledButtonProps {
+interface StyledButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
 }
 
