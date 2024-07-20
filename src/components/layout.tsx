@@ -19,10 +19,10 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = ({
                     </div>
                 </Link>
             </header>
-            <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col md:max-w-xl lg:max-w-3xl">
+            <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col md:max-w-xl lg:max-w-2xl">
                 {children}
             </main>
-            <footer>
+            <footer className="mt-5">
                 <p>&copy; 2024 Zou Minowa</p>
             </footer>
         </div>
