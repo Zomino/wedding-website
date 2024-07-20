@@ -93,7 +93,6 @@ export const Head = () => (
     <>
         <body className="bg-elephant-lighter p-5 text-center font-lato font-light text-elephant-darker" />
         <Seo
-            title="Welcome"
             description="Welcome to Angela and Zou's wedding website. Enter your unique code to access the site."
         />
     </>
