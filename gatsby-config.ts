@@ -13,15 +13,15 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-plugin-image",
+    // Needed for images
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
         path: "./src/images/",
       },
       __key: "images",
-    }
+    },
   ],
 };
 

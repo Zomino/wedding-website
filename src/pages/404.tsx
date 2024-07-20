@@ -7,7 +7,7 @@ import ButtonStyledLink from '../components/primitives/button-styled-link';
 
 const NotFoundPage = () => {
     return (
-        <Layout pageTitle="Page not found">
+        <Layout>
             <h1 className="mt-5 text-center font-raleway text-4xl">
                 Not Found
             </h1>
