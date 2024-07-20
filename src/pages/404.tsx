@@ -1,21 +1,25 @@
-import React from "react";
-import { HeadFC } from "gatsby";
+import React from 'react';
 
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
-import ButtonStyledLink from "../components/button-styled-link";
+import ButtonStyledLink from '../components/primitives/button-styled-link';
 
 const NotFoundPage = () => {
-  return (
-    <Layout pageTitle="Page not found">
-      <ButtonStyledLink className="mx-auto" to="/">
-        Go back
-      </ButtonStyledLink>
-    </Layout>
-  );
+    return (
+        <Layout pageTitle="Page not found">
+            <h1 className="mt-5 text-center font-raleway text-4xl">
+                Not Found
+            </h1>
+            <ButtonStyledLink className="mt-10" to="/">
+                Go back
+            </ButtonStyledLink>
+        </Layout>
+    );
 };
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <Seo title="Not Found" />;
+export const Head = () => (
+    <Seo title="Not Found" description="This page does not exist." />
+);

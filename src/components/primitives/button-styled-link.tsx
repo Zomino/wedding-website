@@ -11,12 +11,10 @@ const ButtonStyledLink = <TState,>(
 
     return (
         <Link
-            className={`w-fit cursor-pointer bg-elephant-darker p-1 font-lato text-elephant-lighter hover:bg-elephant-dark active:bg-elephant ${className}`}
+            className={`rounded-sm bg-elephant-darker px-4 py-2 text-elephant-lighter hover:bg-elephant-dark active:bg-elephant ${className}`}
             {...restProps}
         >
-            <div className="border border-elephant-lighter px-5 py-2">
-                {children}
-            </div>
+            {children}
         </Link>
     );
 };
