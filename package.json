@@ -19,6 +19,7 @@
   "dependencies": {
     "@fontsource-variable/raleway": "^5.0.20",
     "@fontsource/lato": "^5.0.21",
+    "@headlessui/react": "^2.1.2",
     "autoprefixer": "^10.4.19",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
