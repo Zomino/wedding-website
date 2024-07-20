@@ -1,12 +1,13 @@
-import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import * as React from "react";
 
-interface SeoProps {
+
+interface HeadProps {
   description?: string;
   title?: string;
 }
 
-const Seo: React.FC<SeoProps> = ({ description, title }) => {
+const Head: React.FC<HeadProps> = ({ description, title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,7 +23,7 @@ const Seo: React.FC<SeoProps> = ({ description, title }) => {
   return (
     <>
       {/* Gatsby injects these attributes into the body tag */}
-      <body className="bg-elephant-lighter font-light text-center text-elephant-darker" />
+      <body className="p-10" />
       <meta name="author" content={data.site.siteMetadata.author} />
       <meta
         name="description"
@@ -37,4 +38,4 @@ const Seo: React.FC<SeoProps> = ({ description, title }) => {
   );
 };
 
-export default Seo;
+export default Head;
