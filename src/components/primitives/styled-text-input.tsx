@@ -13,8 +13,8 @@ const StyledTextInput: React.FC<
 
     return (
         <Input
-            type="text"
             className={`rounded-sm p-3 focus:outline-elephant-darker ${className}`}
+            type="text"
             {...restProps}
         >
             {children}
