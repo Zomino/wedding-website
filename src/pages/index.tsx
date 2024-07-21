@@ -1,14 +1,16 @@
-import { navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { useTranslation } from "react-i18next"
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 const IndexPage = () => {
+  const { t } = useTranslation('translations');
+
     return (
         <Layout>
-            <h1 className="sr-only">Welcome</h1>
+            <h1 className="sr-only">{t('heading')}</h1>
             <StaticImage
                 alt="Drawing of an elephant and a rabbit"
                 className="w-full"
