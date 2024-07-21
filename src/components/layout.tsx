@@ -30,7 +30,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
                     </span>
                 </Link>
             </header>
-            <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col md:max-w-xl lg:max-w-2xl">
+            <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col px-5 md:max-w-xl lg:max-w-2xl">
                 {children}
             </main>
             <footer className="mt-20">
