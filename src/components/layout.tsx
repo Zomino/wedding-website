@@ -7,9 +7,9 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         <div className="flex min-h-screen flex-col">
             <header>
                 <Link to="/">
-                    <div className="mt-5 font-raleway text-3xl tracking-widest md:text-4xl lg:text-5xl">
+                    <span className="mt-5 font-raleway text-3xl tracking-widest md:text-4xl lg:text-5xl">
                         Angela & Zou
-                    </div>
+                    </span>
                 </Link>
             </header>
             <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col md:max-w-xl lg:max-w-2xl">
