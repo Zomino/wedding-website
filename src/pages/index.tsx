@@ -13,6 +13,7 @@ const IndexPage = () => {
                 alt="Drawing of an elephant and a rabbit"
                 className="w-full"
                 src="../images/elephant-and-rabbit.png"
+                placeholder="blurred"
             />
             <section className="text-md lg:text-lg">
                 <h2 className="sr-only">Invitation & Overview</h2>
