@@ -1,3 +1,49 @@
 {
-    "heading": "Welcome"
+    "common": {
+        "address": "Address",
+        "time": "Time"
+    },
+    "components": {
+        "layout": {
+            "site-title": "Angela & Zou",
+            "copyright-name": "Zou Minowa"
+        }
+    },
+    "pages": {
+        "index": {
+            "page-heading": "Welcome",
+            "hero-image-alt": "Drawing of an elephant and a rabbit",
+            "invitation-and-overview": {
+                "section-heading": "Invitation & Overview",
+                "content": [
+                    "We would be honoured if you could join us at our wedding.",
+                    "The wedding will take place on Saturday, 23rd November 2024, in Hong Kong.",
+                    "The ceremony will be held in a Catholic church in Angela’s home town of Tsuen Wan. We will then move to a hotel in Tsim Sha Tsui by coach for the reception.",
+                    "Please wear whatever you feel comfortable in."
+                ]
+            },
+            "schedule-and-addresses": {
+                "section-heading": "Schedule & Addresses",
+                "ceremony": {
+                    "section-heading": "Ceremony",
+                    "address": [
+                        "SS. Cosmas & Damian Catholic Church",
+                        "Tsuen Wan Catholic Primary School",
+                        "37-41 Tak Wah St",
+                        "Tsuen Wan",
+                        "Hong Kong"
+                    ]
+                },
+                "reception": {
+                    "section-heading": "Reception",
+                    "address": [
+                        "Kowloon Shangri-La Hotel",
+                        "64 Mody Rd",
+                        "Tsim Sha Tsui",
+                        "Hong Kong"
+                    ]
+                }
+            }
+        }
+    }
 }

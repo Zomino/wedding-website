@@ -23,15 +23,8 @@ const Seo: React.FC<SeoProps> = ({ description, title }) => {
         <>
             {/* Gatsby injects these attributes into the body tag */}
             <meta content={data.site.siteMetadata.author} name="author" />
-            <meta
-                content={description || data.site.siteMetadata.description}
-                name="description"
-            />
-            <title>
-                {title
-                    ? `${title} | ${data.site.siteMetadata.title}`
-                    : data.site.siteMetadata.title}
-            </title>
+            <meta content={description || data.site.siteMetadata.description} name="description" />
+            <title>{title ? `${title} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title}</title>
         </>
     );
 };

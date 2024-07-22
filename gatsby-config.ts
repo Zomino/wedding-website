@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  // TODO: Make this internationalised
   siteMetadata: {
     author: "Zou Minowa",
     description: `Angela Chan and Zou Minowa's wedding website`,
