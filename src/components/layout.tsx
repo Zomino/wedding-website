@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [shadow, setShadow] = React.useState(false);
-    const { t } = useTranslation('translations');
+    const { t } = useTranslation();
 
     // Add a shadow to the header when the user scrolls down to separate it from the rest of the page.
     React.useEffect(() => {
@@ -25,12 +25,12 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         <div className="flex min-h-screen flex-col">
             <header className={`sticky top-0 z-10 bg-elephant-lighter py-7 transition-shadow ${shadow ? 'shadow-lg' : ''}`}>
                 <Link to="/">
-                    <span className="font-raleway text-3xl tracking-widest md:text-4xl lg:text-5xl">{t('components.layout.site-title')}</span>
+                    <span className="font-raleway text-3xl tracking-widest md:text-4xl lg:text-5xl">{t('site-metadata.title')}</span>
                 </Link>
             </header>
             <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col px-5 md:max-w-xl lg:max-w-2xl">{children}</main>
             <footer className="mt-20">
-                <p>&copy; 2024 {t('components.layout.copyright-name')}</p>
+                <p>&copy; 2024 {t('site-metadata.author')}</p>
             </footer>
         </div>
     );
