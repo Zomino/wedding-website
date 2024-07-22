@@ -44,6 +44,7 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-plugin-offline',
         },
         // Translations
+        // Implementation based on https://locize.com/blog/gatsby-i18n/
         {
             resolve: `gatsby-source-filesystem`,
             options: {
