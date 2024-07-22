@@ -4,9 +4,7 @@ import React from 'react';
 
 // Gatsby Link preloads resources for the linked page when the link scrolls into view or when the mouse hovers over it.
 // Gatsby Link ref prop is problematic: https://www.charpeni.com/blog/wrapping-gatsbys-link-with-typescript.
-const ButtonStyledLink = <TState,>(
-    props: React.PropsWithoutRef<GatsbyLinkProps<TState>>
-) => {
+const ButtonStyledLink = <TState,>(props: React.PropsWithoutRef<GatsbyLinkProps<TState>>) => {
     const { children, className, ...restProps } = props;
 
     return (

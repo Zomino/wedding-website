@@ -1,14 +1,11 @@
 import { Button } from '@headlessui/react';
 import React from 'react';
 
-interface StyledButtonProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface StyledButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
 }
 
-const StyledButton: React.FC<React.PropsWithChildren<StyledButtonProps>> = (
-    props
-) => {
+const StyledButton: React.FC<React.PropsWithChildren<StyledButtonProps>> = (props) => {
     const { className, children, ...restProps } = props;
 
     return (
