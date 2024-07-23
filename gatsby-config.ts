@@ -55,13 +55,13 @@ const config: GatsbyConfig = {
         {
             resolve: 'gatsby-plugin-react-i18next',
             options: {
-                localeJsonSourceName: `locale`, // Tame given to `gatsby-source-filesystem` plugin
+                localeJsonSourceName: `locale`, // Name given to `gatsby-source-filesystem` plugin
                 languages: ['en-GB', 'zh-HK'],
-                defaultLanguage: 'en-GB',
+                defaultLanguage: 'en-GB', // Default language will be used if the user's preferred language is not available
                 i18nextOptions: {
                     debug: process.env.NODE_ENV === 'development', // Logs information to the console
                     fallbackLng: 'en-GB', // Fallback language for missing translations
-                    defaultNS: 'common', // Namespaces are used to separate translations into different files for better organisation and lazy loading
+                    defaultNS: 'common', // Namespaces are used to separate translations into different files for better organization and lazy loading
                     interpolation: {
                         escapeValue: false, // Not needed as React escapes interpolated values by default to prevent XSS attacks
                     },
