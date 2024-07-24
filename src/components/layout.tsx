@@ -1,12 +1,11 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { Link, useI18next } from 'gatsby-plugin-react-i18next';
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     const [shadow, setShadow] = React.useState(false);
-    const { t } = useTranslation();
+    const { i18n, t } = useI18next();
 
-    // Add a shadow to the header when the user scrolls down to separate it from the rest of the page.
+    // Add a shadow to the header when the user scrolls down to separate it from the rest of the page
     React.useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -21,10 +20,11 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     });
 
     return (
-        // Use flexbox with flex-grow on main to make the footer stick to the bottom when the content is shorter than the viewport.
+        // Use flexbox with flex-grow on main to make the footer stick to the bottom when the content is shorter than the viewport
         <div className="flex min-h-screen flex-col">
-            <header className={`sticky top-0 z-10 bg-elephant-lighter py-7 transition-shadow ${shadow ? 'shadow-lg' : ''}`}>
-                <Link to="/">
+            <header className={`sticky top-0 z-10 bg-elephant-lighter py-10 transition-shadow ${shadow ? 'shadow-lg' : ''}`}>
+                {/* Placeholder is required */}
+                <Link to="/" lang={i18n.language} placeholder={undefined}>
                     <span className="font-raleway text-3xl tracking-widest md:text-4xl lg:text-5xl">{t('site-metadata.title')}</span>
                 </Link>
             </header>

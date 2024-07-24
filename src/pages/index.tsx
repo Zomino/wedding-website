@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Body from '../components/body';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
@@ -103,8 +104,8 @@ export const query = graphql`
 export const Head = () => {
     return (
         <>
-            <body className="bg-elephant-lighter py-5 text-center font-lato font-light text-elephant-darker" />
-            <Seo description="Welcome to Angela and Zou's wedding website" />
+            <Body />
+            <Seo description="Welcome to Angela and Zou's wedding website" title="Welcome" />
         </>
     );
 };

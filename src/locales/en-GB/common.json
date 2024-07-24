@@ -1,4 +1,10 @@
 {
+    "buttons": {
+        "back": "Back"
+    },
+    "errors": {
+        "404": "Page not found"
+    },
     "site-metadata": {
         "author": "Zou Minowa",
         "description": "Angela Chan and Zou Minowa's wedding website",
