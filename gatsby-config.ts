@@ -40,9 +40,6 @@ const config: GatsbyConfig = {
                 icon: 'src/images/icon.png',
             },
         },
-        {
-            resolve: 'gatsby-plugin-offline',
-        },
         // Translations
         // Implementation based on https://locize.com/blog/gatsby-i18n/
         {
@@ -52,6 +49,7 @@ const config: GatsbyConfig = {
                 path: './src/locales/',
             },
         },
+        // The gatsby-plugin-react-i18next has older versions of i18next and react-i18next as peer dependencies.
         {
             resolve: 'gatsby-plugin-react-i18next',
             options: {
