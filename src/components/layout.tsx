@@ -30,13 +30,13 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
         // Use flexbox with flex-grow on main to make the footer stick to the bottom when the content is shorter than the viewport
         <div className="flex min-h-screen flex-col">
             {/* Z-index is required as Gatsby image renders over the sticky header without it */}
-            <header className={`sticky top-0 z-10 bg-elephant-lighter py-10 transition-shadow ${shadow ? 'shadow-lg' : ''}`}>
-                <nav>
+            <header className={`sticky top-0 z-10 grid grid-cols-3 bg-elephant-lighter p-10 transition-shadow ${shadow ? 'shadow-lg' : ''}`}>
+                <nav className="flex justify-start">
                     <ul className="flex justify-center space-x-5">
                         {languageOptions.map((option) => (
                             <li key={option.value}>
                                 <Link
-                                    className={option.value === language ? 'underline' : 'no-underline'}
+                                    className={`hover:border-elephant-dark hover:text-elephant-dark ${option.value === language ? 'border-b-2' : ''}`}
                                     to={option.value === defaultLanguage ? originalPath : `/${option.value}${originalPath}`}
                                 >
                                     {option.label}
@@ -59,3 +59,17 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
 };
 
 export default Layout;
+
+{
+    /* <div class="grid grid-cols-3 gap-4">
+<div class="bg-white p-6 rounded shadow-md">
+  Column 1
+</div>
+<div class="bg-white p-6 rounded shadow-md">
+  Column 2
+</div>
+<div class="bg-white p-6 rounded shadow-md">
+  Column 3
+</div>
+</div> */
+}
