@@ -9,19 +9,27 @@ import StyledListboxOption from './primitives/styled-listbox/styled-listbox-opti
 interface Option {
     value: string;
     label: React.ReactNode;
+    default?: boolean;
 }
 
 interface SelectMenuProps {
+    onChange?: (value: Option) => void;
     options: Array<Option>;
 }
 
 const SelectMenu: React.FC<SelectMenuProps> = (props) => {
-    const { options } = props;
+    // Provide a default empty function for onChange
+    const { onChange = () => undefined, options } = props;
 
-    const [selectedOption, setSelectedOption] = React.useState(options[0]);
+    const [selectedOption, setSelectedOption] = React.useState(options.find((option) => option.default) || options[0]);
+
+    const handleChange = (value: Option) => {
+        setSelectedOption(value);
+        onChange(value);
+    };
 
     return (
-        <Listbox value={selectedOption} onChange={(value) => setSelectedOption(value)}>
+        <Listbox value={selectedOption} onChange={handleChange}>
             <StyledListboxButton>
                 {selectedOption?.label}
                 <ChevronDownIcon className="ml-1 inline h-5 w-5" aria-hidden />
@@ -36,5 +44,7 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
         </Listbox>
     );
 };
+
+export { type Option };
 
 export default SelectMenu;

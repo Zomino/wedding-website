@@ -42,7 +42,7 @@ export const Head = () => {
     return (
         <>
             <Body />
-            <Seo description="This page does not exist." title="Not Found"  />
+            <Seo description="This page does not exist." title="Not Found" />
         </>
     );
 };

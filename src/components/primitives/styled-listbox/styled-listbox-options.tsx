@@ -7,8 +7,7 @@ const StyledListboxOptions: React.FC<React.PropsWithChildren<React.ComponentProp
     return (
         // Gatsby images have a z-index of 10, so this is the minimum required to ensure the options are visible
         <ListboxOptions
-            className={`z-10 rounded-sm border-2 border-elephant-darker bg-elephant-lighter px-4 py-2 transition duration-100 ease-in hover:border-elephant-dark hover:text-elephant-dark data-[closed]:scale-95 data-[closed]:opacity-0 ${className}`}
-            transition
+            className={`z-10 rounded-sm border-2 border-elephant-darker bg-elephant-lighter px-4 py-2 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
             {...restProps}
         >
             {children}

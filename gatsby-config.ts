@@ -46,7 +46,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'locale',
-                path: './src/locales/',
+                path: `./locales/`,
             },
         },
         // The gatsby-plugin-react-i18next has older versions of i18next and react-i18next as peer dependencies.
@@ -54,11 +54,12 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-plugin-react-i18next',
             options: {
                 localeJsonSourceName: `locale`, // Name given to `gatsby-source-filesystem` plugin
-                languages: ['en-GB', 'zh-HK'],
-                defaultLanguage: 'en-GB', // Default language will be used if the user's preferred language is not available
+                languages: ['en', 'zh'], // Languages supported by the website
+                defaultLanguage: 'en', // Default language will be used if the user's preferred language is not available
                 i18nextOptions: {
                     debug: process.env.NODE_ENV === 'development', // Logs information to the console
-                    fallbackLng: 'en-GB', // Fallback language for missing translations
+                    supportedLngs: ['en', 'zh'], // Languages supported by the website
+                    fallbackLng: 'en', // Fallback language for missing translations
                     defaultNS: 'common', // Namespaces are used to separate translations into different files for better organization and lazy loading
                     interpolation: {
                         escapeValue: false, // Not needed as React escapes interpolated values by default to prevent XSS attacks

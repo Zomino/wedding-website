@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Body from '../components/body';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import SelectMenu from '../components/select-menu';
 
 const IndexPage = () => {
     const { t } = useTranslation();
@@ -57,11 +58,11 @@ const IndexPage = () => {
                 <section className="mt-10">
                     <h3 className="font-raleway text-2xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.reception.section-heading')}</h3>
                     <dl className="text-md mt-5 lg:text-lg">
-                        <dt className="sr-only">{t('common.time')}</dt>
+                        <dt className="sr-only">{t('terms.time')}</dt>
                         <dd>
                             <time>{t('schedule-and-addresses.reception.time')}</time>
                         </dd>
-                        <dt className="sr-only">{t('common.address')}</dt>
+                        <dt className="sr-only">{t('terms.address')}</dt>
                         <dd className="mt-3">
                             <address>
                                 {/* i18next documentation recommends use of type assertion: https://www.i18next.com/overview/typescript */}
