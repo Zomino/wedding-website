@@ -1,4 +1,10 @@
 {
+    "buttons": {
+        "back": "回上頁"
+    },
+    "errors": {
+        "404": "找不到網頁"
+    },
     "site-metadata": {
         "author": "簑輪象",
         "description": "陳穎琦與簑輪象的結婚網站",

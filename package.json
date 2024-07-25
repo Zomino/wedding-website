@@ -20,6 +20,7 @@
     "@fontsource-variable/raleway": "^5.0.20",
     "@fontsource/lato": "^5.0.21",
     "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "autoprefixer": "^10.4.19",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
@@ -28,11 +29,11 @@
     "gatsby-plugin-react-i18next": "^3.0.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
-    "i18next": "^23.12.2",
+    "i18next": "^22.5.1",
     "postcss": "^8.4.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^15.0.0",
+    "react-i18next": "^12.3.1",
     "tailwindcss": "^3.4.4"
   },
   "devDependencies": {

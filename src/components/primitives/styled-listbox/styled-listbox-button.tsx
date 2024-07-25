@@ -1,17 +1,17 @@
-import { Button } from '@headlessui/react';
+import { ListboxButton } from '@headlessui/react';
 import React from 'react';
 
-const StyledButton: React.FC<React.PropsWithChildren<React.ComponentProps<typeof Button>>> = (props) => {
+const StyledListboxButton: React.FC<React.PropsWithChildren<React.ComponentProps<typeof ListboxButton>>> = (props) => {
     const { className, children, ...restProps } = props;
 
     return (
-        <Button
+        <ListboxButton
             className={`rounded-sm border-2 border-elephant-darker px-3 py-2 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
             {...restProps}
         >
             {children}
-        </Button>
+        </ListboxButton>
     );
 };
 
-export default StyledButton;
+export default StyledListboxButton;

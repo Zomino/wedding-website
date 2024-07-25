@@ -40,28 +40,27 @@ const config: GatsbyConfig = {
                 icon: 'src/images/icon.png',
             },
         },
-        {
-            resolve: 'gatsby-plugin-offline',
-        },
         // Translations
         // Implementation based on https://locize.com/blog/gatsby-i18n/
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: 'locale',
-                path: './src/locales/',
+                path: `./locales/`,
             },
         },
+        // The gatsby-plugin-react-i18next has older versions of i18next and react-i18next as peer dependencies.
         {
             resolve: 'gatsby-plugin-react-i18next',
             options: {
-                localeJsonSourceName: `locale`, // Tame given to `gatsby-source-filesystem` plugin
-                languages: ['en-GB', 'zh-HK'],
-                defaultLanguage: 'en-GB',
+                localeJsonSourceName: `locale`, // Name given to `gatsby-source-filesystem` plugin
+                languages: ['en', 'zh'], // Languages supported by the website
+                defaultLanguage: 'en', // Default language will be used if the user's preferred language is not available
                 i18nextOptions: {
                     debug: process.env.NODE_ENV === 'development', // Logs information to the console
-                    fallbackLng: 'en-GB', // Fallback language for missing translations
-                    defaultNS: 'common', // Namespaces are used to separate translations into different files for better organisation and lazy loading
+                    supportedLngs: ['en', 'zh'], // Languages supported by the website
+                    fallbackLng: 'en', // Fallback language for missing translations
+                    defaultNS: 'common', // Namespaces are used to separate translations into different files for better organization and lazy loading
                     interpolation: {
                         escapeValue: false, // Not needed as React escapes interpolated values by default to prevent XSS attacks
                     },
