@@ -48,10 +48,10 @@ const config: GatsbyConfig = {
             options: {
               aws: {
                 credentials: {
-                  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-                  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+                  accessKeyId: process.env.GATSBY_AWS_ACCESS_KEY_ID,
+                  secretAccessKey: process.env.GATSBY_AWS_SECRET_ACCESS_KEY,
                 },
-                region: process.env.AWS_REGION,
+                region: process.env.GATSBY_AWS_REGION,
               },
               buckets: ["angela-zou-wedding-website"], // This is managed manually in the AWS console
             },
