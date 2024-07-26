@@ -12,7 +12,7 @@ const NotFoundPage = () => {
     const { language, t } = useI18next();
 
     return (
-        <Layout>
+        <Layout showLanuageSelector={false}>
             <h1 className="mt-5 text-center font-raleway text-4xl">{t('errors.404')}</h1>
             <ButtonStyledLink className="mt-10" to="/" language={language}>
                 {t('buttons.back')}
