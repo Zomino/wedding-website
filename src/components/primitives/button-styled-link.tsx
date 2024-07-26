@@ -8,7 +8,6 @@ interface ButtonStyledLinkProps extends Omit<React.ComponentProps<typeof Link>, 
     placeholder?: string;
 }
 
-
 const ButtonStyledLink: React.FC<React.PropsWithChildren<ButtonStyledLinkProps>> = (props) => {
     const { children, className, ...restProps } = props;
 
