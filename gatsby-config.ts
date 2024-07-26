@@ -67,15 +67,6 @@ const config: GatsbyConfig = {
                     interpolation: {
                         escapeValue: false, // Not needed as React escapes interpolated values by default to prevent XSS attacks
                     },
-                    pages: [
-                        {
-                            // Do not generate a language-specific page for the 404 page.
-                            // This prevents an odd bug where the browser will flash the default language 404 page before redirecting to the correct language 404 page.
-                            // It also prevents the browser from suggesting translations for the 404 page.
-                            matchPath: '/:lang?/404',
-                            getLanguageFromPath: true,
-                        },
-                    ],
                 },
             },
         },
