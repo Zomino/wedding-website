@@ -1,6 +1,8 @@
 {
     "buttons": {
-        "back": "Back"
+        "back": "Back",
+        "english": "English",
+        "chinese": "Chinese"
     },
     "errors": {
         "404": "Page not found"
