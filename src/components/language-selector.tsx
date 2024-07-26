@@ -28,7 +28,7 @@ const LanguageSelector: React.FC = () => {
 
     return (
         <Listbox>
-            <StyledListboxButton className="whitespace-nowrap">
+            <StyledListboxButton>
                 <ReactCountryFlag countryCode={currentLanguage.countryCode || currentLanguage.value} aria-label={currentLanguage.label} />
                 <ChevronDownIcon className="ml-1 inline h-3 w-3" aria-hidden />
             </StyledListboxButton>

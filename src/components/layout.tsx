@@ -1,7 +1,9 @@
 import { useI18next, Link } from 'gatsby-plugin-react-i18next';
+import { Bars3Icon } from '@heroicons/react/20/solid';
 import React from 'react';
 
 import LanguageSelector from './language-selector';
+import DropdownMenu from './dropdown-menu';
 
 interface LayoutProps {
     showLanuageSelector?: boolean;
@@ -27,6 +29,15 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
         return () => window.removeEventListener('scroll', handleScroll);
     });
 
+    const menuOptions = [
+        <Link className="block w-fit whitespace-nowrap px-2 py-1 text-sm" to="/" language={language} placeholder={undefined}>
+            {t('buttons.home')}
+        </Link>,
+        <Link className="block w-fit whitespace-nowrap px-2 py-1 text-sm" to="/pre-wedding-photos" language={language} placeholder={undefined}>
+            {t('buttons.pre-wedding-photos')}
+        </Link>,
+    ];
+
     return (
         // Use flexbox with flex-grow on main to make the footer stick to the bottom when the content is shorter than the viewport
         <div className="flex min-h-screen flex-col">
@@ -39,9 +50,12 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
                 <Link className="col-span-4" placeholder={undefined} to="/" language={language}>
                     <span className="font-raleway text-xl tracking-widest md:text-4xl">{t('site-metadata.title')}</span>
                 </Link>
+                <div className="col-span-1 justify-self-end">
+                    {<DropdownMenu triggerLabel={<Bars3Icon className="inline h-3 w-3" />} options={menuOptions} />}
+                </div>
             </header>
             <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col px-3 md:max-w-xl lg:max-w-3xl">{children}</main>
-            <footer className="mt-20">
+            <footer className="mt-16">
                 <p>&copy; 2024 {t('site-metadata.author')}</p>
             </footer>
         </div>
