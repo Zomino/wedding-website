@@ -2,7 +2,8 @@
     "buttons": {
         "back": "Back",
         "english": "English",
-        "chinese": "Chinese"
+        "chinese": "Chinese",
+        "view-map": "View on map"
     },
     "errors": {
         "404": "Page not found"

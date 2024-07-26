@@ -1,12 +1,12 @@
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 import { useTranslation } from 'react-i18next';
 
 import Body from '../components/body';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import SelectMenu from '../components/select-menu';
 
 const IndexPage = () => {
     const { t } = useTranslation();
@@ -54,6 +54,10 @@ const IndexPage = () => {
                             </address>
                         </dd>
                     </dl>
+                    <a className="mt-3 inline-flex items-center hover:text-elephant-dark" href="https://maps.app.goo.gl/HRKWtCmCp7epEMN76" target="_blank">
+                        {t('buttons.view-map')}
+                        <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
+                    </a>
                 </section>
                 <section className="mt-10">
                     <h3 className="font-raleway text-xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.reception.section-heading')}</h3>
@@ -79,6 +83,10 @@ const IndexPage = () => {
                             </address>
                         </dd>
                     </dl>
+                    <a className="mt-3 inline-flex items-center hover:text-elephant-dark" href="https://maps.app.goo.gl/hvYe8wJMffBR6Qhp8" target="_blank">
+                        {t('buttons.view-map')}
+                        <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
+                    </a>
                 </section>
             </section>
         </Layout>

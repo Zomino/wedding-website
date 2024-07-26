@@ -2,7 +2,8 @@
     "buttons": {
         "back": "回上頁",
         "english": "英文",
-        "chinese": "中文 (繁體)"
+        "chinese": "中文 (繁體)",
+        "view-map": "打開地圖"
     },
     "errors": {
         "404": "找不到網頁"
