@@ -1,4 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const siteUrl = 'https://www.angelaandzou.com';
 
@@ -28,6 +31,9 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-plugin-sharp',
         },
         {
+            resolve: 'gatsby-transformer-sharp' // Required for dynamic images (e.g. S3)
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
@@ -35,6 +41,21 @@ const config: GatsbyConfig = {
             },
             __key: 'images',
         },
+        // Photos
+        // Implementation based on https://github.com/gatsby-uc/plugins/tree/main/packages/gatsby-source-s3
+        {
+            resolve: `gatsby-source-s3`,
+            options: {
+              aws: {
+                credentials: {
+                  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+                  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+                },
+                region: process.env.AWS_REGION,
+              },
+              buckets: ["angela-zou-wedding-website"], // This is managed manually in the AWS console
+            },
+          },
         // PWA
         {
             resolve: 'gatsby-plugin-manifest',
