@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const siteUrl = 'https://www.angelaandzou.com';
+
 const config: GatsbyConfig = {
     // Unfortunately useTranslation cannot be used inside of the Head API.
     // gatsby-plugin-react-i18next does not currently work with React context: https://github.com/gatsbyjs/gatsby/issues/36458
@@ -7,7 +9,7 @@ const config: GatsbyConfig = {
         author: 'Zou Minowa',
         description: `Angela Chan and Zou Minowa's wedding website`,
         title: `Angela & Zou`,
-        siteUrl: `https://www.angelaandzou.com`,
+        siteUrl,
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
     // If you use VSCode you can also use the GraphQL plugin
@@ -56,6 +58,7 @@ const config: GatsbyConfig = {
                 localeJsonSourceName: `locale`, // Name given to `gatsby-source-filesystem` plugin
                 languages: ['en', 'zh'], // Languages supported by the website
                 defaultLanguage: 'en', // Default language will be used if the user's preferred language is not available
+                siteUrl,
                 i18nextOptions: {
                     debug: process.env.NODE_ENV === 'development', // Logs information to the console
                     supportedLngs: ['en', 'zh'], // Languages supported by the website
@@ -64,6 +67,15 @@ const config: GatsbyConfig = {
                     interpolation: {
                         escapeValue: false, // Not needed as React escapes interpolated values by default to prevent XSS attacks
                     },
+                    pages: [
+                        {
+                            // Do not generate a language-specific page for the 404 page.
+                            // This prevents an odd bug where the browser will flash the default language 404 page before redirecting to the correct language 404 page.
+                            // It also prevents the browser from suggesting translations for the 404 page.
+                            matchPath: '/:lang?/404',
+                            getLanguageFromPath: true,
+                        },
+                    ],
                 },
             },
         },
