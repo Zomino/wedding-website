@@ -1,6 +1,8 @@
 {
     "buttons": {
-        "back": "回上頁"
+        "back": "回上頁",
+        "english": "英文",
+        "chinese": "中文 (繁體)"
     },
     "errors": {
         "404": "找不到網頁"

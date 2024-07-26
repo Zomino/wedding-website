@@ -6,7 +6,7 @@ const StyledButton: React.FC<React.PropsWithChildren<React.ComponentProps<typeof
 
     return (
         <Button
-            className={`rounded-sm border-2 border-elephant-darker px-3 py-2 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
+            className={`rounded-sm border-1 border-elephant-darker px-2 py-1 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
             {...restProps}
         >
             {children}

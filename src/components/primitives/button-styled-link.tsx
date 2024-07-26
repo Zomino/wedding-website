@@ -6,7 +6,7 @@ const ButtonStyledLink: React.FC<React.PropsWithoutRef<React.ComponentProps<type
 
     return (
         <Link
-            className={`rounded-sm border-2 border-elephant-darker px-3 py-2 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
+            className={`rounded-sm border-1 border-elephant-darker px-2 py-1 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
             {...restProps}
         >
             {children}

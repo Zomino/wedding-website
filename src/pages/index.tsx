@@ -31,7 +31,7 @@ const IndexPage = () => {
             <section className="mt-5">
                 <h2 className="sr-only">{t('schedule-and-addresses.section-heading')}</h2>
                 <section className="mt-10">
-                    <h3 className="font-raleway text-2xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.ceremony.section-heading')}</h3>
+                    <h3 className="font-raleway text-xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.ceremony.section-heading')}</h3>
                     <dl className="text-md mt-5 lg:text-lg">
                         <dt className="sr-only">{t('terms.time')}</dt>
                         <dd>
@@ -56,7 +56,7 @@ const IndexPage = () => {
                     </dl>
                 </section>
                 <section className="mt-10">
-                    <h3 className="font-raleway text-2xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.reception.section-heading')}</h3>
+                    <h3 className="font-raleway text-xl tracking-wider lg:text-3xl">{t('schedule-and-addresses.reception.section-heading')}</h3>
                     <dl className="text-md mt-5 lg:text-lg">
                         <dt className="sr-only">{t('terms.time')}</dt>
                         <dd>
