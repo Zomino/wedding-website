@@ -54,7 +54,7 @@ const IndexPage = () => {
                             </address>
                         </dd>
                     </dl>
-                    <a className="mt-3 inline-flex items-center hover:text-elephant-dark" href="https://maps.app.goo.gl/HRKWtCmCp7epEMN76" target="_blank">
+                    <a className="mt-3 inline-flex items-center text-lg hover:text-elephant-dark" href="https://maps.app.goo.gl/HRKWtCmCp7epEMN76" target="_blank">
                         {t('buttons.view-map')}
                         <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
                     </a>
@@ -83,7 +83,7 @@ const IndexPage = () => {
                             </address>
                         </dd>
                     </dl>
-                    <a className="mt-3 inline-flex items-center hover:text-elephant-dark" href="https://maps.app.goo.gl/hvYe8wJMffBR6Qhp8" target="_blank">
+                    <a className="mt-3 inline-flex items-center text-lg hover:text-elephant-dark" href="https://maps.app.goo.gl/hvYe8wJMffBR6Qhp8" target="_blank">
                         {t('buttons.view-map')}
                         <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
                     </a>
