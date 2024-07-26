@@ -3,7 +3,13 @@ import React from 'react';
 
 import LanguageSelector from './language-selector';
 
-const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
+interface LayoutProps {
+    showLanuageSelector?: boolean;
+}
+
+const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
+    const { children, showLanuageSelector = true } = props;
+
     const [shadow, setShadow] = React.useState(false);
     const { language, t } = useI18next();
 
@@ -28,7 +34,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
             <header
                 className={`sticky top-0 z-10 grid grid-cols-6 items-center bg-elephant-lighter p-5 transition-shadow md:px-7 md:py-10 ${shadow ? 'shadow-lg' : ''}`}
             >
-                <LanguageSelector className="justify-self-start" />
+                <div className="col-span-1">{showLanuageSelector && <LanguageSelector className="justify-self-start" />}</div>
                 {/* Placeholder is required */}
                 <Link className="col-span-4" placeholder={undefined} to="/" language={language}>
                     <span className="font-raleway text-xl tracking-widest md:text-4xl lg:text-5xl">{t('site-metadata.title')}</span>
