@@ -18,7 +18,7 @@ const NotFoundPage = () => {
         <Layout>
             <h1 className="text:xl text-center font-raleway md:text-2xl">{t('page-heading')}</h1>
             {/* data-netlify will be parsed by Netlify at deploy time and submissions from this form will be sent to the Netlify form submission handler */}
-            <form className="mt-5 w-64" data-netlify="true" method="POST">
+            <form className="mt-5 w-64" data-netlify="true" method="POST" name="contact">
                 <Field className="flex flex-col items-start">
                     <Label>{t('form.name.label')}</Label>
                     <Input className="w-full rounded-sm border-1 border-elephant-darker px-2 py-1" name="name" required type="input" />
@@ -27,7 +27,7 @@ const NotFoundPage = () => {
                 <Field className="mt-3 flex flex-col items-start">
                     <Label>{t('form.email.label')}</Label>
                     <Input className="w-full rounded-sm border-1 border-elephant-darker px-2 py-1" name="email" required type="email" />
-                    <Description className="text-xs text-elephant">{t('form.email.label')}</Description>
+                    <Description className="text-xs text-elephant">{t('form.email.description')}</Description>
                 </Field>
                 <Field className="mt-3 flex flex-col items-start">
                     <div className="flex">
