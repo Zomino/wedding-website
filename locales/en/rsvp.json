@@ -1,0 +1,17 @@
+{
+    "page-heading": "RSVP",
+    "form": {
+        "name": {
+            "label": "Name",
+            "description": "Please enter your full name"
+        },
+        "email": {
+            "label": "Email",
+            "description": "Please enter your email address"
+        },
+        "attending": {
+            "label": "Attending",
+            "description": "Will you be attending the wedding?"
+        }
+    }
+}

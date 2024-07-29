@@ -13,7 +13,7 @@ const ButtonStyledLink: React.FC<React.PropsWithChildren<ButtonStyledLinkProps>>
 
     return (
         <Link
-            className={`rounded-sm border-1 border-elephant-darker px-2 py-1 hover:border-elephant-dark hover:text-elephant-dark ${className}`}
+            className={`rounded-sm border-1 border-elephant-darker bg-elephant-darker px-2 py-1 text-elephant-lighter hover:border-elephant-dark hover:bg-elephant-dark ${className}`}
             placeholder={undefined}
             {...restProps}
         >

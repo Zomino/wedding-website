@@ -10,6 +10,7 @@ module.exports = {
                 dark: '#807e7e',
                 darker: '#676464',
             },
+            white: '#ffffff',
         },
         fontFamily: {
             raleway: ['Raleway', 'sans-serif'],

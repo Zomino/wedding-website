@@ -36,6 +36,9 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
         <Link className="block w-fit whitespace-nowrap px-2 py-1 text-sm" to="/pre-wedding-photos" language={language} placeholder={undefined}>
             {t('buttons.pre-wedding-photos')}
         </Link>,
+        <Link className="block w-fit whitespace-nowrap px-2 py-1 text-sm" to="/rsvp" language={language} placeholder={undefined}>
+            {t('buttons.rsvp')}
+        </Link>,
     ];
 
     return (

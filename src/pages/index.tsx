@@ -5,6 +5,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Body from '../components/body';
+import ButtonStyledLink from '../components/primitives/button-styled-link';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
@@ -97,6 +98,9 @@ const IndexPage = () => {
                     </a>
                 </section>
             </section>
+            <div className="mx-3 mt-10">
+                <ButtonStyledLink to="/rsvp">{t('buttons.rsvp')}</ButtonStyledLink>
+            </div>
         </Layout>
     );
 };

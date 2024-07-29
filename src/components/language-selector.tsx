@@ -34,7 +34,7 @@ const LanguageSelector: React.FC = () => {
             </StyledListboxButton>
             <StyledListboxOptions anchor={{ to: 'bottom', gap: 1 }} className="w-[var(--button-width)]">
                 {languageOptions.map((option) => (
-                    <Link placeholder={undefined} to={originalPath} language={option.value}>
+                    <Link key={option.value} placeholder={undefined} to={originalPath} language={option.value}>
                         <StyledListboxOption key={option.value} value={option}>
                             <ReactCountryFlag countryCode={option.countryCode} aria-label={option.label} />
                         </StyledListboxOption>
