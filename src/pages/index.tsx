@@ -98,7 +98,7 @@ const IndexPage = () => {
                     </a>
                 </section>
             </section>
-            <section className="mt-10">
+            <section className="mt-10 text-md md:text-lg">
                 <h2 className="font-raleway text-xl tracking-wider md:text-3xl">{t('contact-us.section-heading')}</h2>
                 <p className="mt-5">{t('contact-us.content')}</p>
                 <address className="mt-3">
