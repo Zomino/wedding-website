@@ -98,9 +98,10 @@ const IndexPage = () => {
                     </a>
                 </section>
             </section>
-            <div className="mx-3 mt-10">
+            {/* FIXME: The RSVP page doesn't work because Netlify is not picking up the submissions */}
+            {/* <div className="mx-3 mt-10">
                 <ButtonStyledLink to="/rsvp">{t('buttons.rsvp')}</ButtonStyledLink>
-            </div>
+            </div> */}
         </Layout>
     );
 };
