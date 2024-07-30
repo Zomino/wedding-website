@@ -62,7 +62,7 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
             <footer className="mt-16">
                 <p>&copy; 2024 {t('site-metadata.author')}</p>
                 <a
-                    className="mt-1 inline-flex items-center hover:text-elephant-dark text-sm"
+                    className="mt-1 inline-flex items-center text-sm hover:text-elephant-dark"
                     href="https://github.com/Zomino/wedding-website"
                     target="_blank"
                 >

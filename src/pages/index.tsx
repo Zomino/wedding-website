@@ -98,14 +98,23 @@ const IndexPage = () => {
                     </a>
                 </section>
             </section>
-            <section className="mt-10 text-md md:text-lg">
+            <section className="text-md mt-16 md:text-lg">
                 <h2 className="font-raleway text-xl tracking-wider md:text-3xl">{t('contact-us.section-heading')}</h2>
                 <p className="mt-5">{t('contact-us.content')}</p>
                 <address className="mt-3">
-                    <p><a href="mailto:zouminowa@gmail.com">zouminowa@gmail.com<EnvelopeIcon className="ml-1 inline-block h-4 w-4" /></a></p>
-                    <p><a href="mailto:cwkangela@gmail.com">cwkangela@gmail.com<EnvelopeIcon className="ml-1 inline-block h-4 w-4" /></a></p>
+                    <p>
+                        <a className="inline-flex items-center hover:text-elephant-dark" href="mailto:cwkangela@gmail.com">
+                            cwkangela@gmail.com
+                            <EnvelopeIcon className="ml-2 inline-block h-4 w-4" />
+                        </a>
+                    </p>
+                    <p>
+                        <a className="mt-3 inline-flex items-center hover:text-elephant-dark" href="mailto:zouminowa@gmail.com">
+                            zouminowa@gmail.com
+                            <EnvelopeIcon className="ml-2 inline-block h-4 w-4" />
+                        </a>
+                    </p>
                 </address>
-
             </section>
             {/* FIXME: The RSVP page doesn't work because Netlify is not picking up the submissions */}
             {/* <div className="mx-3 mt-10">
