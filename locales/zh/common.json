@@ -3,7 +3,12 @@
         "back": "回上頁",
         "english": "英文",
         "chinese": "中文 (繁體)",
-        "view-map": "打開地圖"
+        "home": "主頁",
+        "pre-wedding-photos": "我們的照片",
+        "rsvp": "敬請回覆",
+        "submit": "提交",
+        "view-map": "打開地圖",
+        "view-github": "在Github上查看"
     },
     "errors": {
         "404": "找不到網頁"
@@ -11,7 +16,7 @@
     "site-metadata": {
         "author": "簑輪象",
         "description": "陳穎琦與簑輪象的結婚網站",
-        "title": "穎琦與象",
+        "title": "穎琦與阿象",
         "site-url": "https://www.angelaandzou.com"
     },
     "terms": {
