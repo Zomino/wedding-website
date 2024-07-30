@@ -1,49 +1,24 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Wedding Website
 
-## 🚀 Quick start
+Welcome to our wedding website!
 
-1.  **Create a Gatsby site.**
+## About
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+As we planned our wedding, we realized that we wanted a website, but we didn't want to use a cookie cutter template design that would have lacked anything personal. So I decided to build it myself and use it as an opportunity to explore a few new web technologies and concepts.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Technology & Tools
 
-2.  **Start developing.**
+### Design
 
-    Navigate into your new site’s directory and start it up.
+- [Figma](https://www.figma.com/)
+- [Daisuke Minowa](https://www.instagram.com/daisuke_minowa/?hl=en) - Not a tool, but my father!
+- [Color Hex](https://www.color-hex.com/)
+- [Google Fonts](https://fonts.google.com/)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Tech Stack
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Tailwind](https://tailwindcss.com/)
+- [Headless UI](https://headlessui.com/) - With [Heroicons](https://heroicons.com/)
+- [Amazon S3](https://aws.amazon.com/pm/serv-s3/?gclid=Cj0KCQjw-5y1BhC-ARIsAAM_oKlfRrcylAAVYtIS-Oo2yPKOlMQXHnvnGDkPdTTFMwBpVrCa8UpHMxsaAgvgEALw_wcB&trk=7f5be961-ff39-4768-a30d-157e1e0ba4af&sc_channel=ps&ef_id=Cj0KCQjw-5y1BhC-ARIsAAM_oKlfRrcylAAVYtIS-Oo2yPKOlMQXHnvnGDkPdTTFMwBpVrCa8UpHMxsaAgvgEALw_wcB:G:s&s_kwcid=AL!4422!3!638364469897!p!!g!!aws%20s3%20web%20hosting!19096959518!146526905920) - With [gatsby-source-s3](https://www.gatsbyjs.com/plugins/gatsby-source-s3/) for images
+- [i18next](https://www.i18next.com/) - With [gatsby-plugin-react-i18next](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-i18next/)
