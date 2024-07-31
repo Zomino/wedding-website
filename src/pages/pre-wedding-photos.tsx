@@ -71,7 +71,7 @@ export const Head = () => {
     return (
         <>
             <Body />
-            <Seo description="Angela and Zou's pre-wedding photos." title="Pre-wedding Photos" />
+            <Seo description="Angela and Zou's pre-wedding photos." title="Pre-Wedding Photos" />
         </>
     );
 };
