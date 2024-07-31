@@ -23,5 +23,9 @@
             "time": "18:00",
             "address": ["Kowloon Shangri-La Hotel", "64 Mody Rd", "Tsim Sha Tsui", "Hong Kong"]
         }
+    },
+    "contact-us": {
+        "section-heading": "Contact Us",
+        "content": "Please let one of us know if you can make it."
     }
 }

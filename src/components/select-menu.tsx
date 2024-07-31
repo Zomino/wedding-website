@@ -6,15 +6,15 @@ import StyledListboxButton from './primitives/styled-listbox/styled-listbox-butt
 import StyledListboxOptions from './primitives/styled-listbox/styled-listbox-options';
 import StyledListboxOption from './primitives/styled-listbox/styled-listbox-option';
 
-interface Option {
+interface SelectOption {
     value: string;
     label: React.ReactNode;
     default?: boolean;
 }
 
 interface SelectMenuProps {
-    onChange?: (value: Option) => void;
-    options: Array<Option>;
+    onChange?: (value: SelectOption) => void;
+    options: SelectOption[];
 }
 
 const SelectMenu: React.FC<SelectMenuProps> = (props) => {
@@ -23,7 +23,7 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
 
     const [selectedOption, setSelectedOption] = React.useState(options.find((option) => option.default) || options[0]);
 
-    const handleChange = (value: Option) => {
+    const handleChange = (value: SelectOption) => {
         setSelectedOption(value);
         onChange(value);
     };
@@ -32,9 +32,9 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
         <Listbox value={selectedOption} onChange={handleChange}>
             <StyledListboxButton>
                 {selectedOption?.label}
-                <ChevronDownIcon className="ml-1 inline h-5 w-5" aria-hidden />
+                <ChevronDownIcon className="ml-1 inline h-3 w-3" aria-hidden />
             </StyledListboxButton>
-            <StyledListboxOptions anchor={{ to: 'bottom', gap: 1 }} className="w-[var(--button-width)]">
+            <StyledListboxOptions anchor={{ to: 'bottom', gap: 2 }} className="w-[var(--button-width)]">
                 {options.map((option) => (
                     <StyledListboxOption key={option.value} value={option}>
                         {option.label}
@@ -45,6 +45,6 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
     );
 };
 
-export { type Option };
+export { type SelectOption };
 
 export default SelectMenu;

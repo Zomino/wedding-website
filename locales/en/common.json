@@ -2,7 +2,13 @@
     "buttons": {
         "back": "Back",
         "english": "English",
-        "chinese": "Chinese"
+        "chinese": "Chinese",
+        "home": "Home",
+        "pre-wedding-photos": "Pre-Wedding Photos",
+        "rsvp": "RSVP",
+        "submit": "Submit",
+        "view-map": "View on map",
+        "view-github": "View project on Github"
     },
     "errors": {
         "404": "Page not found"

@@ -1,4 +1,9 @@
 import type { GatsbyConfig } from 'gatsby';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const siteUrl = 'https://www.angelaandzou.com';
 
 const config: GatsbyConfig = {
     // Unfortunately useTranslation cannot be used inside of the Head API.
@@ -7,7 +12,7 @@ const config: GatsbyConfig = {
         author: 'Zou Minowa',
         description: `Angela Chan and Zou Minowa's wedding website`,
         title: `Angela & Zou`,
-        siteUrl: `https://www.angelaandzou.com`,
+        siteUrl,
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
     // If you use VSCode you can also use the GraphQL plugin
@@ -26,6 +31,9 @@ const config: GatsbyConfig = {
             resolve: 'gatsby-plugin-sharp',
         },
         {
+            resolve: 'gatsby-transformer-sharp' // Required for dynamic images (e.g. S3)
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
@@ -33,6 +41,21 @@ const config: GatsbyConfig = {
             },
             __key: 'images',
         },
+        // Photos
+        // Implementation based on https://github.com/gatsby-uc/plugins/tree/main/packages/gatsby-source-s3
+        {
+            resolve: `gatsby-source-s3`,
+            options: {
+              aws: {
+                credentials: {
+                  accessKeyId: process.env.GATSBY_AWS_ACCESS_KEY_ID,
+                  secretAccessKey: process.env.GATSBY_AWS_SECRET_ACCESS_KEY,
+                },
+                region: process.env.GATSBY_AWS_REGION,
+              },
+              buckets: ["angela-zou-wedding-website"], // This is managed manually in the AWS console
+            },
+          },
         // PWA
         {
             resolve: 'gatsby-plugin-manifest',
@@ -56,6 +79,7 @@ const config: GatsbyConfig = {
                 localeJsonSourceName: `locale`, // Name given to `gatsby-source-filesystem` plugin
                 languages: ['en', 'zh'], // Languages supported by the website
                 defaultLanguage: 'en', // Default language will be used if the user's preferred language is not available
+                siteUrl,
                 i18nextOptions: {
                     debug: process.env.NODE_ENV === 'development', // Logs information to the console
                     supportedLngs: ['en', 'zh'], // Languages supported by the website
