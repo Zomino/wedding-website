@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import { Checkbox, Description, Field, Input, Label } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/20/solid';
@@ -68,9 +68,14 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => {
+interface HeadPageContext {
+    i18n: { language: string };
+}
+
+export const Head: HeadFC<{}, HeadPageContext> = (props) => {
     return (
         <>
+            <html lang={props.pageContext.i18n.language} />
             <Body />
             <Seo description="RSVP to Angela and Zou's wedding." title="RSVP" />
         </>

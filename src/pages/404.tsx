@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 
@@ -38,9 +38,14 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => {
+interface HeadPageContext {
+    i18n: { language: string };
+}
+
+export const Head: HeadFC<{}, HeadPageContext> = (props) => {
     return (
         <>
+            <html lang={props.pageContext.i18n.language} />
             <Body />
             <Seo description="This page does not exist." title="Not Found" />
         </>

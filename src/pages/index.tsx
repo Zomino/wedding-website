@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { ArrowTopRightOnSquareIcon, EnvelopeIcon } from '@heroicons/react/20/solid';
 import React from 'react';
@@ -141,9 +141,14 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => {
+interface HeadPageContext {
+    i18n: { language: string };
+}
+
+export const Head: HeadFC<{}, HeadPageContext> = (props) => {
     return (
         <>
+            <html lang={props.pageContext.i18n.language} />
             <Body />
             <Seo description="Welcome to Angela and Zou's wedding website" title="Welcome" />
         </>
