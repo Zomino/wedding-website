@@ -8,15 +8,16 @@ import StyledMenuItem from './primitives/styled-menu/styled-menu-item';
 
 interface DropdownMenuProps {
     options: React.ReactNode[];
+    triggerAria?: string;
     triggerLabel: React.ReactNode;
 }
 
 const DropdownMenu: React.FC<DropdownMenuProps> = (props) => {
-    const { options, triggerLabel } = props;
+    const { options, triggerAria, triggerLabel } = props;
 
     return (
         <Menu>
-            <StyledMenuButton>
+            <StyledMenuButton aria-label={triggerAria}>
                 {triggerLabel}
                 <ChevronDownIcon className="ml-1 inline h-3 w-3" aria-hidden />
             </StyledMenuButton>

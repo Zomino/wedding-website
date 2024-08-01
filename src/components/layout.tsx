@@ -55,7 +55,7 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
                     <span className="font-raleway text-xl tracking-widest md:text-4xl">{t('site-metadata.title')}</span>
                 </Link>
                 <div className="col-span-1 justify-self-end">
-                    {<DropdownMenu triggerLabel={<Bars3Icon className="inline h-3 w-3" aria-label="Menu" />} options={menuOptions} />}
+                    {<DropdownMenu triggerAria="Menu" triggerLabel={<Bars3Icon className="inline h-3 w-3" />} options={menuOptions} />}
                 </div>
             </header>
             <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col px-3 md:max-w-xl lg:max-w-3xl">{children}</main>
