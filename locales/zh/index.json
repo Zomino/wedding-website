@@ -21,7 +21,10 @@
         },
         "reception": {
             "section-heading": "晚宴",
-            "time": "下午六時",
+            "drinks-time": "下午五時",
+            "drinks-time-label": "恭候",
+            "banquet-time": "下午七時",
+            "banquet-time-label": "入席",
             "address": ["九龍香格里拉", "香港九龍尖沙咀東麼地道64號"]
         }
     },

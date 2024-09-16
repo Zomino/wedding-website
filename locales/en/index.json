@@ -19,7 +19,10 @@
         },
         "reception": {
             "section-heading": "Reception",
-            "time": "18:00",
+            "drinks-time": "17:00",
+            "drinks-time-label": "Drinks & Mahjong",
+            "banquet-time": "19:00",
+            "banquet-time-label": "Banquet",
             "address": ["Kowloon Shangri-La Hotel", "64 Mody Rd", "Tsim Sha Tsui", "Hong Kong"]
         }
     },

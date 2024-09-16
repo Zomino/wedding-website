@@ -67,9 +67,13 @@ const IndexPage = () => {
                 <section className="mt-10">
                     <h3 className="font-raleway text-xl tracking-wider md:text-3xl">{t('schedule-and-addresses.reception.section-heading')}</h3>
                     <dl className="text-md mt-5 md:text-lg">
-                        <dt className="sr-only">{t('terms.time')}</dt>
-                        <dd>
-                            <time>{t('schedule-and-addresses.reception.time')}</time>
+                        <dt>{t('schedule-and-addresses.reception.drinks-time-label')}</dt>
+                        <dd className="mt-1">
+                            <time>{t('schedule-and-addresses.reception.drinks-time')}</time>
+                        </dd>
+                        <dt className="mt-3">{t('schedule-and-addresses.reception.banquet-time-label')}</dt>
+                        <dd className="mt-1">
+                            <time>{t('schedule-and-addresses.reception.banquet-time')}</time>
                         </dd>
                         <dt className="sr-only">{t('terms.address')}</dt>
                         <dd className="mt-3">
