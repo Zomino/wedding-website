@@ -61,14 +61,6 @@ const Layout: React.FC<React.PropsWithChildren<LayoutProps>> = (props) => {
             <main className="mx-auto mt-5 flex max-w-full flex-grow flex-col px-3 md:max-w-xl lg:max-w-3xl">{children}</main>
             <footer className="mt-16">
                 <p>&copy; 2024 {t('site-metadata.author')}</p>
-                <a
-                    className="mt-1 inline-flex items-center text-sm hover:text-elephant-dark"
-                    href="https://github.com/Zomino/wedding-website"
-                    target="_blank"
-                >
-                    {t('buttons.view-github')}
-                    <ArrowTopRightOnSquareIcon className="ml-1 inline-block h-4 w-4" />
-                </a>
             </footer>
         </div>
     );
