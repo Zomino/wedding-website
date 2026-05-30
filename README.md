@@ -4,7 +4,7 @@ Welcome to our wedding website!
 
 ## About
 
-As we planned our wedding, we realized that we wanted a website, but we didn't want to use a cookie cutter template design that would have lacked anything personal. So I decided to build it myself and use it as an opportunity to explore a few new web technologies and concepts.
+As we planned our wedding, we realised that we wanted a website, but we didn't want to use a cookie cutter template design that would have lacked anything personal. So I decided to build it myself and use it as an opportunity to explore a few new web technologies and concepts.
 
 ## Technology & Tools
 
